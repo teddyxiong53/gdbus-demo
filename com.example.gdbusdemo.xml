@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node name="/com/example/gdbusdemo">
+  <interface name="com.example.gdbusdemo">
+    <!-- Get name method -->
+    <method name="GetName">
+      <arg type="s" name="json_response" direction="out"/>
+    </method>
+    
+    <!-- Set name method -->
+    <method name="SetName">
+      <arg type="s" name="json_input" direction="in"/>
+      <arg type="s" name="json_response" direction="out"/>
+    </method>
+    
+    <!-- Name changed signal -->
+    <signal name="NameChanged">
+      <arg type="s" name="json_notification"/>
+    </signal>
+  </interface>
+</node>
